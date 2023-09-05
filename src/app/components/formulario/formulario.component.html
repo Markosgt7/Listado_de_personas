@@ -8,6 +8,7 @@
       class="form-control"
       placeholder="Escriba su nombre"
       aria-describedby="helpId"
+      #nombreInput
     />
   </div>
   <div class="mb-3">
@@ -19,11 +20,18 @@
       class="form-control"
       placeholder="Escriba su apellido"
       aria-describedby="helpId"
+      #apellidoInput
     />
   </div>
-  <div class="">
-    <button type="button" name="agregar" id="agregar" class="btn btn-primary">
-      Agregar
+  <div class="col-md-3">
+    <button
+      type="submit"
+      name="agregar"
+      id="agregar"
+      class="btn btn-primary mt-4"
+      (click)="agregarPersona()"
+    >
+      Agregar Persona
     </button>
   </div>
 </form>
