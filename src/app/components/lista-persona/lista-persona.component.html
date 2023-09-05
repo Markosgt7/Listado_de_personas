@@ -1,1 +1,13 @@
-<p>lista-persona works!</p>
+<div class="container">
+  <div class="col">
+    <h1>Listado de Personas</h1>
+    <hr />
+    <app-formulario (personaCreada)="personaAgregada($event)"></app-formulario>
+  </div>
+</div>
+
+<app-lista-persona
+  *ngFor="let personaElemento of personas; let i = index"
+  [persona]="personaElemento"
+  [indice]="i"
+></app-lista-persona>
